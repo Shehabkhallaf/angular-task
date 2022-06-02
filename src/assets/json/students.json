@@ -1,0 +1,10 @@
+[
+    {"name":"shehab" ,"course" :"HTML" ,"grade":"A"},
+    {"name":"mohamed" ,"course" :"CSS","grade":"B"},
+    {"name":"ahmed" ,"course" :"javascript","grade":"C"},
+    {"name":"khaled" ,"course" :"Angular","grade":"A"},
+    {"name":"omar" ,"course" :"React","grade":"D"},
+    {"name":"mahmoud" ,"course" :"Typescript","grade":"B"},
+    {"name":"khallaf" ,"course" :"Node.js","grade":"D"}
+
+]

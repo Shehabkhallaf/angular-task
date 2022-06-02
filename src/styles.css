@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.cdk-overlay-container{
+    z-index: 2000;
+}
+*{
+    box-sizing: border-box;
+}
+.col{
+height: 400px;
+margin: 1rem;
+padding: 0;
+}
+.student-image{
+    height: 70%;
+    width: 100%;
+}
+.student-image img{
+    height: 100%;
+    width: 100%;
+}
+.mat-form-field{
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+
+<div class="modal-body">
+  <h4 class="modal-title fw-bold text-center">{{modalMode}} {{type}}</h4>
+    <form class="my-2" #addForm="ngForm">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="outline">
+              <mat-label>{{type}} name</mat-label>
+              <input #name="ngModel" required matInput [placeholder]="type + 'name'" name="name" [(ngModel)]="data.name"/>
+              <mat-error *ngIf="name.invalid">{{type}} Name is required</mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div class="col-6" *ngIf="type==='student'">
+            <mat-form-field appearance="outline">
+              <mat-label>student grade</mat-label>
+              <input #grade="ngModel" required matInput maxlength="1" placeholder="student grade" name="grade" [(ngModel)]="data.grade"/>
+              <mat-error *ngIf="grade.invalid">grade is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-6" *ngIf="type==='student'">
+            <mat-form-field appearance="outline">
+              <mat-label>Courses</mat-label>
+              <mat-select #course="ngModel" required name="course" [(ngModel)]="data.course">
+                <mat-option *ngFor="let course of courses" [value]="course">{{course}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="course.invalid">Course Name is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-12">
+              <button class="btn btn-danger me-2" (click)="cancel()">Cancel</button>
+              <button class="btn btn-success" [disabled]="addForm.invalid" (click)="add()">Save</button>
+          </div>
+        </div>
+      </form>
+</div>
